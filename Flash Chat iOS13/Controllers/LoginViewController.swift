@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
             Auth.auth().signIn(withEmail:email,password:password){ authResult, error in
                 if let e=error{print(e.localizedDescription)}
                 else{
-                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                    self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }
             }
         }
